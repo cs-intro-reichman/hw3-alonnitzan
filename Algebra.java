@@ -110,13 +110,13 @@ public class Algebra {
 		// when x1 positive and x2 negative
 		if (x1 >= 0 && x2 < 0){
 			x2 = minus(0, x2);
-			postiiveResult = false;
+			postiiveResult = true;
 		}
 			
 		// when x1 negative and x2 positive
-		else if (x2 >= 0 && x1 < 0){
+		else if (x1 < 0 && x2 >= 0){
 			x1 = minus(0, x1);
-			postiiveResult = false;
+			postiiveResult = true;
 		}
 		
 		// when both negative
@@ -179,7 +179,6 @@ public class Algebra {
 			i++;
 			currentNumber = pow(i, 2);
 		}
-
 
 		if (currentNumber == x) return i;
 		else {
