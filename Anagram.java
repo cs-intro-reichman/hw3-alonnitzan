@@ -13,6 +13,9 @@ public class Anagram {
 		
 		// Tests the randomAnagram function.
 		System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
+		String try1 = "alon nitzan1";
+		String tr1Anagram = randomAnagram(try1);
+		System.out.println(try1 + " and " + tr1Anagram + " are anagrams? " + isAnagram(try1, tr1Anagram));
 		
 		// Performs a stress test of randomAnagram 
 		String str = "1234567";
@@ -86,7 +89,7 @@ public class Anagram {
 		for (int i = 0; i < str.length(); i++){
 			
 			char c = str.charAt(i);
-			if (Character.isLetter(c)) {
+			if (Character.isLetter(c) || c == ' ') {
 				c = Character.toLowerCase(c);
 				newStr = newStr + c;
 			}
